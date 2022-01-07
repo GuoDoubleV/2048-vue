@@ -32,7 +32,7 @@ const style = computed(() => {
   }
 });
 
-const emit = defineEmits(['add', 'remove'])
+const emit = defineEmits(['remove'])
 
 watch(
   () => item.number,

@@ -4,13 +4,13 @@
       总分： {{ score }}
     </div>
     <div class="game">
+      <!-- 背景布局 -->
       <div class="game-bg">
-        <div class="item" v-for="item in 16" :key="item"></div>
+        <div class="item" v-for="i in 16" :key="i"></div>
       </div>
 
       <div class="canvas">
-        <NumberBlock v-for="(v,i) in numberList" :ref="'block'+v.uid" :key="v.uid" :item="v" @remove="removeNumber(i)"
-          @add="(e) => {score+=e}" />
+        <NumberBlock v-for="(v,i) in numberList" :key="v.uid" :item="v" @remove="removeNumber(i)"/>
       </div>
     </div>
   </div>
